@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(./img/bgbig2.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	border: 1px solid aqua;
+	height: 500px;
+	width: 600px;
+	background-color: rgba(0, 0, 0, 0.65);
+
+	margin-top: 90px;
+}
+h1 img {
+	height: 160px;
+	color: aqua;
+	position: absolute;
+	top: 10.5rem;
+	left: -8.5rem;
+	animation: rotation1 7s linear infinite;
+}
+
+h2 img {
+	height: 160px;
+	color: aqua;
+	position: absolute;
+	top: 10.5rem;
+	right: -8.5rem;
+	animation: rotation2 7s linear infinite;
+}
+
+.logo {
+	color: aqua;
+	font-size: 1.5em;
+	padding-top: 1.8em;
+	padding-bottom: 1em;
+	margin-bottom: 50px;
+	animation: appearance 3s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+}
+.photokb {
+	height: 200px;
+	margin-bottom: 50px;
+	animation: appearance 5s;
+	animation-delay: 3s;
+	animation-fill-mode: both;
+}
+a {
+	font-size: 15px;
+	color: aqua;
+	text-decoration: none;
+	border: 0.5px solid aqua;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	animation: appearance 3s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	font-family: 'Black Ops One', system-ui;
+}
+@media (max-width: 1400px) {
+	body {
+		background-image: url('./img/bgbig2.png');
+		background-size: auto;
+	}
+}
+@media (max-width: 770px) {
+	.container {
+		height: 450px;
+		width: 450px;
+	}
+
+	.logo {
+		font-size: 1em;
+	}
+	.photokb {
+		height: 150px;
+	}
+	a {
+		font-size: 10px;
+	}
+	h1 img {
+		height: 120px;
+		top: 9.9rem;
+	    left: -7.5rem;
+	}
+	h2 img {
+		height: 120px;
+		top: 9.9rem;
+	    right: -7.5rem;
+	}
+}
+@media (max-width: 528px) {
+	.container {
+		height: 250px;
+		width: 250px;
+	}
+	.logo {
+		font-size: 0.5em;
+	}
+	.photokb {
+		height: 80px;
+	}
+	a {
+		font-size: 5px;
+	}
+	h1 img {
+		height: 70px;
+		top: 5.5rem;
+		left: -4rem;
+	}
+	h2 img {
+		height: 70px;
+		top: 5.5rem;
+		right: -4rem;
+	}
+}
+
+@keyframes appearance {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes rotation1 {
+	0% {
+		transform: perspective(300px) rotateY(360deg);
+	}
+
+	100% {
+		transform: perspective(300px) rotateY(0deg);
+	}
+}
+@keyframes rotation2 {
+	0% {
+		transform: perspective(300px) rotateY(0deg);
+	}
+
+	100% {
+		transform: perspective(300px) rotateY(360deg);
+	}
+}
